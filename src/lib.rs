@@ -11,7 +11,7 @@ macro_rules! impl_types {
         $be: ident, $le: ident, $ne: ident,
     )*) => {
         $(
-            #[derive(Default, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
+            #[derive(Default, Copy, Clone, Eq, PartialEq, Hash)]
             #[allow(non_camel_case_types)]
             #[repr(transparent)]
             pub struct $be($ne);
@@ -34,7 +34,7 @@ macro_rules! impl_types {
                 }
             }
 
-            #[derive(Default, Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash)]
+            #[derive(Default, Copy, Clone, Eq, PartialEq, Hash)]
             #[allow(non_camel_case_types)]
             #[repr(transparent)]
             pub struct $le($ne);
